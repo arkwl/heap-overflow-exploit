@@ -1,0 +1,7 @@
+#!/bin/bash
+rm -f padding.h
+RANDOM=$1
+n=$(($RANDOM % 1021))
+for (( c=1; c <= $n; c++ )); do
+    echo "for (i=0; i < 10; i++) z += i*z;" >> padding.h
+done
